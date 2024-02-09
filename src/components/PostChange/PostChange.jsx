@@ -9,7 +9,7 @@ function PostChange() {
   const { data, isLoading } = service(`${process.env.REACT_APP_API_URL}/posts/${id}`);
   const [content, setContent] = useState('');
   const navigate = useNavigate();
-  const handleCancel = () => navigate('/');
+  const handleCancel = () => navigate('/ra-router-crud');
   const handleSubmit = async (e) => {
     e.preventDefault();
     const post = { id: id, content };
@@ -21,8 +21,8 @@ function PostChange() {
         },
         body: JSON.stringify(post),
       });
-      if (!response.ok) throw new Error('Failed to create post');
-      navigate('/');
+      if (!response.ok) throw new Error('Failed to change post');
+      navigate('/ra-router-crud');
     } catch (e) {
       console.error(e);
     }

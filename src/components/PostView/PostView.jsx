@@ -16,7 +16,7 @@ function PostView() {
         method: 'DELETE',
       });
       if (!response.ok) throw new Error('Failed to delete post');
-      navigate('/');
+      navigate('/ra-router-crud');
     } catch (e) {
       console.error(e);
     }

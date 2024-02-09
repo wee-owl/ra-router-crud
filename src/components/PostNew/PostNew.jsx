@@ -6,7 +6,7 @@ import avatar from '../../assets/avatar.png';
 function PostNew() {
   const [content, setContent] = useState('');
   const navigate = useNavigate();
-  const handleCancel = () => navigate('/');
+  const handleCancel = () => navigate('/ra-router-crud');
   const handleSubmit = async (e) => {
     e.preventDefault();
     const newPost = { id: 0, content: content };
@@ -19,7 +19,7 @@ function PostNew() {
         body: JSON.stringify(newPost),
       });
       if (!response.ok) throw new Error('Failed to create post');
-      navigate('/');
+      navigate('/ra-router-crud');
     } catch (e) {
       console.error(e);
     }

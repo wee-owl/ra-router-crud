@@ -12,7 +12,7 @@ function App() {
     <BrowserRouter>
       <main className='main'>
         <Routes>
-          <Route path='/' exact Component={HomePage}/>
+          <Route path='/ra-router-crud' exact Component={HomePage}/>
           <Route path='/posts/new' Component={PostNew}/>
           <Route path='/posts/:id' Component={PostView}/>
           <Route path='/posts/change/:id' Component={PostChange}/>
